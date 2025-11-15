@@ -5,6 +5,7 @@ import SystemOverview from "./SystemOverview";
 import UserManagement from "./UserManagement";
 import Analytics from "./Analytics";
 import Reports from "./Reports";
+import CampRequest from "../../components/Admin/camprequest";
 import { useTheme } from "../../context/ThemeContext"; // ✅ import
 
 const AdminDashboard: React.FC = () => {
@@ -13,9 +14,10 @@ const AdminDashboard: React.FC = () => {
 
   const tabs = [
     { key: "overview", label: "System Overview" },
+    { key: "camp", label: "Camp Requests" },
     { key: "users", label: "User Management" },
     { key: "analytics", label: "Analytics" },
-    { key: "reports", label: "Reports" },
+    // { key: "reports", label: "Reports" },
   ];
 
   return (
@@ -112,9 +114,11 @@ const AdminDashboard: React.FC = () => {
         {/* Tab Content */}
         <div className="mt-6">
           {activeTab === "overview" && <SystemOverview />}
+          {activeTab === "camp" &&<CampRequest />}
           {activeTab === "users" && <UserManagement />}
           {activeTab === "analytics" && <Analytics />}
-          {activeTab === "reports" && <Reports />}
+          {/* {activeTab === "reports" && <Reports />} */}
+
         </div>
       </div>
     </div>
