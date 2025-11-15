@@ -77,6 +77,65 @@ const Hospital: React.FC = () => {
           ))}
         </div>
 
+          {/* Blood Request Section */}
+    <div className={`p-4 rounded-xl shadow-sm border mt-6 ${darkMode ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"}`}>
+    <h3 className="font-semibold mb-4">Blood Request Form</h3>
+
+
+      <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {/* Hospital Name */}
+    <div>
+    <label className="text-sm font-medium">Hospital Name</label>
+    <input
+  type="text"
+  placeholder="Enter hospital name"
+  className={`w-full p-2 rounded-lg border mt-1 ${darkMode ? "bg-gray-700 border-gray-600 text-white" : "bg-gray-100 border-gray-300"}`}
+  />
+  </div>
+
+
+{/* Request Type */}
+  <div>
+  <label className="text-sm font-medium">Request Type</label>
+  <select
+  className={`w-full p-2 mt-1 rounded-lg border ${darkMode ? "bg-gray-700 border-gray-600 text-white" : "bg-gray-100 border-gray-300"}`}
+>
+<option value="critical">Critical</option>
+<option value="medium">Medium</option>
+<option value="low">Low</option>
+<option value="high">High</option>
+</select>
+</div>
+
+
+{/* Blood Type */}
+<div>
+<label className="text-sm font-medium">Blood Type</label>
+<select
+className={`w-full p-2 mt-1 rounded-lg border ${darkMode ? "bg-gray-700 border-gray-600 text-white" : "bg-gray-100 border-gray-300"}`}
+>
+{['A+','A-','B+','B-','AB+','AB-','O+','O-'].map((type, i) => (
+<option key={i}>{type}</option>
+))}
+</select>
+</div>
+
+
+{/* Units Required */}
+<div>
+<label className="text-sm font-medium">Required Units</label>
+<input
+type="number"
+placeholder="Enter units"
+className={`w-full p-2 mt-1 rounded-lg border ${darkMode ? "bg-gray-700 border-gray-600 text-white" : "bg-gray-100 border-gray-300"}`}
+/>
+</div>
+</form>
+
+
+<button className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Submit Request</button>
+</div>
+
         {/* Charts */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
           <div
