@@ -31,7 +31,7 @@ const BloodTypePieChart: React.FC = () => (
         cx="50%"
         cy="50%"
         labelLine={false}
-        label={({ name }) => name}
+        label={(props: any) => props.name || ""}
         outerRadius={90}
         fill="#8884d8"
         dataKey="value"

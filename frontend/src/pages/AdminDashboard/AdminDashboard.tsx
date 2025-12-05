@@ -4,7 +4,6 @@ import Navbar from "../../components/Navbar";
 import SystemOverview from "./SystemOverview";
 import UserManagement from "./UserManagement";
 import Analytics from "./Analytics";
-import Reports from "./Reports";
 import CampRequest from "../../components/Admin/camprequest";
 import { useTheme } from "../../context/ThemeContext"; // ✅ import
 

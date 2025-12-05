@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
           <Globe size={16} className="mr-1" />
           <Select
             value={language}
-            onChange={(e) => setLanguage(e.target.value)}
+            onChange={(e: { target: { value: string } }) => setLanguage(e.target.value)}
             size="small"
             className="!text-sm"
             sx={{
