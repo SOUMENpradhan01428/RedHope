@@ -59,8 +59,7 @@ const Login: React.FC = () => {
             }`}
           >
             <option>EN</option>
-            <option>FR</option>
-            <option>HI</option>
+            
           </select>
         </div>
 
