@@ -1,5 +1,10 @@
 import React from "react";
 import { useTheme } from "../../context/ThemeContext";
+import Navbar from "../../components/Navbar";
+import UrgentBloodRequests from "../../components/Donor/UrgentBloodRequests";
+// import DonationProgress from "../../components/Donor/DonationProgress";
+import BloodRequestsNearYou from "../../components/Donor/BloodRequestsNearYou";
+import DonationCamps from "../../components/Donor/DonationCamps";
 
 const DonationProgress = () => {
   const { darkMode } = useTheme();

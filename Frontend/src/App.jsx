@@ -4,13 +4,14 @@ import LoadingFallback from "./components/LoadingFallback";
 
 // Lazy loading (JS version)
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard/AdminDashboard"));
-const DonorDashboard = lazy(() => import("./pages/DonorDashboard"));
-const Hospital = lazy(() => import("./pages/Hospital"));
-const Login = lazy(() => import("./pages/login"));
+const DonorDashboard = lazy(() => import("./pages/DonorDashboard/DonorDashboard"));
+const Hospital = lazy(() => import("./pages/Hospital/Hospital"));
+const Login = lazy(() => import("./pages/Login.jsx"));
 // const NotFound = lazy(() => import("./pages/Notfound"));
 
 export default function App() {
   return (
+    
     <Suspense fallback={<LoadingFallback />}>
       <Routes>
         <Route path="/admin" element={<AdminDashboard />} />

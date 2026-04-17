@@ -4,7 +4,7 @@ import { Avatar, MenuItem, Select } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const navigate = useNavigate();
   const { darkMode, toggleDarkMode } = useTheme();
 
@@ -20,10 +20,10 @@ const Navbar: React.FC = () => {
     navigate("/");
   };
 
-  const handleLanguageChange = (value: string) => {
-    setLanguage(value);
-    localStorage.setItem("lang", value);
-  };
+const handleLanguageChange = (value) => {
+  setLanguage(value);
+  localStorage.setItem("lang", value);
+};
 
   return (
     <div
@@ -69,31 +69,34 @@ const Navbar: React.FC = () => {
         ></div>
 
         {/* Language */}
-        <div
-          className={`flex items-center border rounded-md px-2 py-1 ${
-            darkMode
-              ? "bg-gray-800 border-gray-600"
-              : "bg-white border-gray-300"
-          }`}
-        >
-          <Globe size={16} className="mr-1" />
-          <Select
-            value={language}
-            onChange={(e) =>
-              handleLanguageChange(e.target.value as string)
-            }
-            size="small"
-            sx={{
-              height: 28,
-              fontSize: "0.8rem",
-              color: darkMode ? "#e0e0e0" : "#333",
-              ".MuiOutlinedInput-notchedOutline": { border: "none" },
-            }}
-          >
-            <MenuItem value="EN">EN</MenuItem>
-            <MenuItem value="IN">IN</MenuItem>
-          </Select>
-        </div>
+            <div
+  className={`flex items-center border rounded-md px-2 py-1 ${
+    darkMode
+      ? "bg-gray-800 border-gray-600"
+      : "bg-white border-gray-300"
+  }`}
+>
+  <Globe size={16} className="mr-1" />
+
+  <Select
+    value={language}
+    onChange={(e) => handleLanguageChange(e.target.value)}
+    size="small"
+    className="text-sm"
+    sx={{
+      height: 28,
+      fontSize: "0.8rem",
+      color: darkMode ? "#e0e0e0" : "#333",
+      ".MuiOutlinedInput-notchedOutline": { border: "none" },
+    }}
+  >
+    <MenuItem value="EN">EN</MenuItem>
+    <MenuItem value="IN">IN</MenuItem>
+  </Select>
+</div>
+
+
+           
 
         {/* Theme */}
         <button

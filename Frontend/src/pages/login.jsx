@@ -3,6 +3,9 @@ import { Globe, Moon, Sun, Heart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 
+
+
+
 const Login = () => {
   const navigate = useNavigate();
   const { darkMode, toggleDarkMode } = useTheme();
@@ -23,7 +26,10 @@ const Login = () => {
   };
 
   return (
+    
+
     <div
+    
       className={`min-h-screen flex flex-col items-center justify-center ${
         darkMode ? "bg-gray-900 text-white" : "bg-rose-50 text-gray-800"
       }`}

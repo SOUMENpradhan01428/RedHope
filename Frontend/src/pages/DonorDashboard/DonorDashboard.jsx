@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import UrgentBloodRequests from "../components/Donor/UrgentBloodRequests";
-import DonationProgress from "../components/Donor/DonationProgress";
-import BloodRequestsNearYou from "../components/Donor/BloodRequestsNearYou";
-import DonationCamps from "../components/Donor/DonationCamps";
-import RewardSection from "../components/Donor/RewardSection";
-import { useTheme } from "../context/ThemeContext";
+import Navbar from "../../components/Navbar";
+import UrgentBloodRequests from "../../components/Donor/UrgentBloodRequests";
+import DonationProgress from "../../components/Donor/DonationProgress";
+import BloodRequestsNearYou from "../../components/Donor/BloodRequestsNearYou";
+import DonationCamps from "../../components/Donor/DonationCamps";
+import RewardSection from "../../components/Donor/RewardSection";
+import { useTheme } from "../../context/ThemeContext";
 
 const DonorDashboard = () => {
   const [activeTab, setActiveTab] = useState("Overview");

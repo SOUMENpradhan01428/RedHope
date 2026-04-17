@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import WeeklyCollectionChart from "../components/Charts/WeeklyCollectionChart";
-import BloodTypePieChart from "../components/Charts/BloodTypePieChart";
+import Navbar from "../../components/Navbar";
+import WeeklyCollectionChart from "../../components/Charts/WeeklyCollectionChart";
+import BloodTypePieChart from "../../components/Charts/BloodTypePieChart";
 import { AlertCircle } from "lucide-react";
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 const Hospital = () => {
   const { darkMode } = useTheme();
