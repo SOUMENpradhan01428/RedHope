@@ -27,8 +27,11 @@ app.use("/api/messages", require("./routes/messageRoutes"));
 
 
 
-const PORT = process.env.PORT || 5000;
+if (require.main === module) {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`Server Running On Port ${PORT}`);
+  });
+}
 
-app.listen(PORT, () => {
-  console.log(`Server Running On Port ${PORT}`);
-});
+module.exports = app;

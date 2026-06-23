@@ -1,0 +1,8 @@
+{
+  "name": "redhope-root",
+  "version": "1.0.0",
+  "scripts": {
+    "install": "cd Frontend && npm install && cd ../Backend && npm install",
+    "build": "cd Frontend && npm run build"
+  }
+}
